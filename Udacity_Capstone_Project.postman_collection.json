@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "b92954c3-dbce-44fa-92fb-ac6108b56a6e",
+		"name": "Udacity Capstone Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18764209"
+	},
+	"item": [
+		{
+			"name": "PokemonNotes",
+			"item": [
+				{
+					"name": "Get all pokemon notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/pokemon-notes",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"pokemon-notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create pokemon note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"bulbasaur\",\n    \"attribute\": \"grass\",\n    \"combatPower\": 92,\n    \"description\": \"A strange seed was planted on its back at\\nbirth. The plant sprouts and grows with\\nthis POKéMON.\",\n    \"attachmentUrl\": \"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png\"\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/pokemon-notes",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"pokemon-notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update pokemon note",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"bulbasaur\",\n    \"attribute\": \"grass\",\n    \"combatPower\": 99,\n    \"description\": \"A strange seed was planted on its back at\\nbirth. The plant sprouts and grows with\\nthis POKéMON.\"\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/pokemon-notes/a5842ce9-6e29-4bf5-85cd-4e23ccce625b",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"pokemon-notes",
+								"a5842ce9-6e29-4bf5-85cd-4e23ccce625b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete pokemon note",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/pokemon-notes/a5842ce9-6e29-4bf5-85cd-4e23ccce625b",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"pokemon-notes",
+								"a5842ce9-6e29-4bf5-85cd-4e23ccce625b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get attachment URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/attachment/upload_image_123456",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"attachment",
+								"upload_image_123456"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiId",
+			"value": "sy62dv5vfb",
+			"type": "string"
+		},
+		{
+			"key": "authToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IldFTG5JY3hTUFBqQktKZFZWSjQ5UCJ9.eyJpc3MiOiJodHRwczovL2Rldi1uZjgzdmJwM2xzcXFuc2puLnVzLmF1dGgwLmNvbS8iLCJhdWQiOiJIcWtrVEUzTm1rNzZBbHB0VVVDdVN4UE5zSVNRNE9DNyIsImlhdCI6MTY5MTMzOTIzMSwiZXhwIjoxNjkxMzc1MjMxLCJzdWIiOiJnb29nbGUtb2F1dGgyfDExNTU4ODk0OTg5NTQ2MzY4NzEzMCIsImF0X2hhc2giOiJHQUd3WFlfR1Y4M3pPUklpbG9EeXZBIiwic2lkIjoicGVNOUVmMlV2SlVsX2h1S3ZHaEFfLS1zaXB0eHJUMy0iLCJub25jZSI6IjdrNG5nbndGMHd5b0d4VmVZZEtKaVBEZE9MeDJNdFJ3In0.US3pRgSK6KuxyyV6PNtQ9w6WclEYvhDpE9s8HCOdmdmv2ecuFBENJ3gklVuT_pOCPoHjb-ORxaOdzb4tcGgzRpffVtHu2tXYRtfY6lEt1mTFLyoYwTHBuj3w5nqjjxpldBjyvLxJoZgEPM17hu-R6-Ufb3Ninz8hgWHyBlCLb-vBuWectTSq9JWYvb0XMGmbg5VNORohyjICdcbRo203XkklU9f_bkkAONtQ0wny2KWOThV0grKt0ctqKnRnNfCHdrpCBN220zmQSPcCMsGgCu6FWWRRNYEfRfBW32Bk-ysbu7TPe5ZRgRCYTH6rjXibd4aoTgZe8X5iVjyNAWKWmw",
+			"type": "string"
+		}
+	]
+}
