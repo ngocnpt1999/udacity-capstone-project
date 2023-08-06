@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "group",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+        },
+        "attribute": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 255
+        },
+        "combatPower": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 100
+        },
+        "description": {
+            "type": "string"
+        },
+        "attachmentUrl": {
+            "type": "string",
+            "minLength": 1
+        }
+    },
+    "required": [
+        "name",
+        "attribute",
+        "combatPower",
+        "attachmentUrl"
+    ],
+    "additionalProperties": false
+}
